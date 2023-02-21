@@ -43,8 +43,30 @@ namespace Project3
 
             Console.WriteLine("Your total of the 3 numbers is: " + total);
 
+            Console.WriteLine();
+
+
+            //distance
+            Console.WriteLine("Enter three distances in km");
+            Console.WriteLine();
+
+            Console.WriteLine("Enter first distance: ");
+            double distanceOne = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter second distance: ");
+            double distanceTwo = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter third distance: ");
+            double distanceThree = Convert.ToDouble(Console.ReadLine());
+
+            double average = (distanceOne + distanceTwo + distanceThree) / 3;
+
+            Console.WriteLine($"Your average distance is {average:f2}") ;
+
+            Console.WriteLine();
+
+
 
             //find hypotenuse
+
             Console.WriteLine("To find the hypotenuse enter two legs of a right triangle");
 
             Console.WriteLine("Enter leg one: ");
@@ -53,16 +75,20 @@ namespace Project3
             Console.WriteLine("Enter leg two: ");
             int legTwo = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine();
+            double hypotenuse = FindHypotenuse(legTwo, legOne);
+            Console.WriteLine($"The hypotenuse length is {hypotenuse:f2}" );
+
+
 
         }
    
 
+        public static double FindHypotenuse(double leg1, double leg2)
 
-
-        public static double Sqrt(double leg1, double leg2)
         {
-            return leg1 + leg2;
+            double hypotenuse = Math.Sqrt(Math.Pow(leg1, 2)+ Math.Pow(leg2, 2));
+            return hypotenuse;
+            //return leg1 + leg2;
         }
     }
 
