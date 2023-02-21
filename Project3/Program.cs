@@ -88,7 +88,7 @@ namespace Project3
         {
             double hypotenuse = Math.Sqrt(Math.Pow(leg1, 2)+ Math.Pow(leg2, 2));
             return hypotenuse;
-            //return leg1 + leg2;
+            
         }
     }
 
